@@ -1,0 +1,6 @@
+# Hardware report
+HOST= {{ inventory_hostname }}
+MEMORY={{ ansible_memtotal_mb }}
+BIOS={{ ansible_bios_version }}
+DISK_SIZE_VDA={{ ansible_devices.vda.size }}
+DISK_SIZE_VDB={{ ansible_devices.vdb.size | default('NONE', true) }}

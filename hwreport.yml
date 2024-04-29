@@ -1,0 +1,7 @@
+---
+- name: gen hwreport file
+  hosts: all
+  - name: Template a file to /root/hwreport.txt
+    template:
+      src: /home/greg/ansible/hwreport.j2
+      dest: /root/hwreport.txt
